@@ -1,0 +1,4 @@
+tests/
+.github/
+PUBLISH.md
+docs/screenshots/*.psd

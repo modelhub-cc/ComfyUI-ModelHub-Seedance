@@ -1,0 +1,27 @@
+[project]
+name = "modelhub-seedance"
+version = "0.1.0"
+description = "Seedance 2.0 / 2.5 text-to-video and reference (image / video / audio) to video nodes via the ModelHub API. Per-second billing, failed jobs not charged."
+authors = [{ name = "ModelHub" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = ["requests>=2.25"]
+classifiers = ["Operating System :: OS Independent"]
+keywords = ["comfyui", "seedance", "video", "text-to-video", "image-to-video", "bytedance", "modelhub"]
+
+[project.urls]
+Repository = "https://github.com/modelhub-cc/ComfyUI-ModelHub-Seedance"
+"Bug Tracker" = "https://github.com/modelhub-cc/ComfyUI-ModelHub-Seedance/issues"
+Documentation = "https://github.com/modelhub-cc/ComfyUI-ModelHub-Seedance#readme"
+
+[tool.comfy]
+PublisherId = "modelhub"
+DisplayName = "ModelHub Seedance"
+Icon = "https://raw.githubusercontent.com/modelhub-cc/ComfyUI-ModelHub-Seedance/main/docs/icon.png"
+includes = []
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+pythonpath = [".", "tests"]
+testpaths = ["tests"]

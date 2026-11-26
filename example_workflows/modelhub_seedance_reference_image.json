@@ -1,0 +1,139 @@
+{
+  "id": "00000000-0000-4000-8000-000000000002",
+  "revision": 0,
+  "last_node_id": 2,
+  "last_link_id": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ModelHubSeedanceVideo",
+      "pos": [
+        60,
+        80
+      ],
+      "size": [
+        420,
+        640
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "config",
+          "type": "MODELHUB_CONFIG",
+          "link": null
+        },
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "video_url",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "task_id",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelHubSeedanceVideo"
+      },
+      "widgets_values": [
+        "seedance-2.5",
+        "The character from image 1 walks into a neon-lit noodle bar, sits down and smiles at the camera. Rain outside, cinematic.",
+        "9:16",
+        "720p",
+        10,
+        true,
+        "omni_reference",
+        0,
+        "https://example.com/your-public-reference.png",
+        "",
+        "",
+        "ModelHub/seedance",
+        1800
+      ]
+    },
+    {
+      "id": 2,
+      "type": "SaveVideo",
+      "pos": [
+        540,
+        80
+      ],
+      "size": [
+        400,
+        500
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 1
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ModelHub",
+        "auto",
+        "auto"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "note": "Set MODELHUB_API_KEY before starting ComfyUI. No key is stored in this file."
+  },
+  "version": 0.4
+}
